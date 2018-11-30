@@ -1,0 +1,19 @@
+<div class="slideShow" ng-controller="sliderCtrl as slider">
+	<div class="slideContainer" ng-mouseenter="stopTimer()" ng-mouseleave="startTimer()">
+		<div  ng-repeat="image in slideShow track by $index"  class="slide">
+			<img src="{{image.src}}" class="image" align="center" ng-show="image.status">
+		</div>
+		<div class="slideButtons" align="center">
+			<i class="material-icons" id="leftnocursor">arrow_left</i>
+			<span ng-repeat="button in buttonSlide track by $index">
+					<i class="material-icons" ng-click="getImage(button.id)" ng-class="{active: button.status}">fiber_manual_record</i>
+			</span>
+			<i class="material-icons" id="rightnocursor">arrow_right</i>
+		</div>
+		<div class="slideControls">
+			<i class="material-icons left noSelect" ng-click="previous()">arrow_left</i>
+			<i class="material-icons right noSelect" ng-click="next()">arrow_right</i>
+		</div>
+	</div>
+</div>
+

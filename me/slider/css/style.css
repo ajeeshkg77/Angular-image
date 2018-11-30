@@ -1,0 +1,82 @@
+/*	.slideContainer,.slideControls,.slideButtons{
+		position: relative;
+	}
+
+	
+
+	.active{
+		color: red;
+	}
+
+	 .slide img{
+	 	background-position: center;
+	 	background-repeat: no-repeat;
+	 	background-size: cover;
+	 	width: 100%;
+	 	height: 500px;
+	 	position: absolute;
+	 	top: 0;
+	 	left: 0;
+	 }
+
+	.material-icons{
+		cursor: pointer;
+	}
+
+	.slideButtons{
+		top: 00px;
+	}
+
+	#leftnocursor,#rightnocursor{
+		cursor: default;
+	}
+
+	.left,.right{ 
+		font-size: 96px !important;
+		color: white;
+		position: absolute;
+		top: 170px;
+		display: inline-block;
+		background-color: transparent;
+	}
+
+	.left{
+		left: 0;
+	}
+
+	.right{
+		right: 0;
+		float: right;
+	}
+
+
+
+.noSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
+  .image.ng-hide-add,
+  .image.ng-hide-remove {
+    -webkit-transition: all linear 1s;
+    -moz-transition: all linear 1s;
+    -o-transition: all linear 1s;
+    transition: all linear 1s;
+    display: block !important;
+  }
+
+  .image.ng-hide-add.ng-hide-add-active,
+  .image.ng-hide-remove {
+    opacity: 0;
+  }
+
+  .image.ng-hide-add,
+  .image.ng-hide-remove.ng-hide-remove-active {
+    opacity: 1;
+  }*/

@@ -1,0 +1,182 @@
+<div class="slideshow" ng-controller="sliderCtrl as slider">
+  <div class="slider">
+    <div class="slide" ng-repeat="slide in slideShow track by $index" align="center">
+      <img class="image" src="assets/images/{{slide.src}}" align="center" ng-show="slide.status">
+    </div>
+    <div class="slideoverlay">
+      <i ng-click="previous()" class="material-icons sliderArrows">fast_rewind</i>
+      <i ng-click="next()" class="material-icons sliderArrows right">fast_forward</i>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="btnGroup">
+    	<i class="material-icons" ng-repeat="button in buttonSlide track by $index" ng-click="getImage(button.id)" ng-class="{active: button.status}">stop</i>
+
+      <!--   <i class="material-icons rowbtns" ng-repeat="button in buttonSlide track by $index" ng-click="getImage(button.id)" ng-class="{active: button.status}">fiber_manual_record</i> -->
+
+
+    </div>
+    </div>
+  </div>
+</div>
+<style>
+  .slideshow {
+    position: relative;
+    width: 90%;
+    min-width: 490px;
+    margin: auto;
+    height: 600px;
+  }
+
+  .slider {
+    position: relative;
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+  }
+
+  .slide {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    box-shadow: 0px 0px 15px #999;
+    height: 600px;
+      opacity: 1;
+   /*  -webkit-transform: rotateY( 180deg );
+  -ms-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );*/
+  }
+
+ .slide.ng-hide-add,
+  .slide.ng-hide-remove {
+-webkit-transition: all linear 2s;
+    -moz-transition: all linear 2s;
+    -o-transition: all linear 2s;
+    transition: all linear 2s;
+
+    display: block !important;
+  }
+
+  .slide.ng-hide-add.ng-hide-add-active,
+  .slide.ng-hide-remove {
+    opacity: 0;
+  }
+
+  .slide.ng-hide-add,
+  .slide.ng-hide-remove.ng-hide-remove-active {
+    opacity: 1;
+  }
+
+  .slideoverlay {
+    position: relative;
+
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    user-select: none;
+  }
+
+  .sliderArrows {
+    /* position: relative; */
+    font-size: 208px;
+    color: rgba(255, 255, 255, 0.3);
+    /* top: 100px; */
+    cursor: pointer;
+    margin-top: 20%;
+  }
+
+  .sliderArrows.right {
+    float: right;
+  }
+
+.active{
+	color:red;
+}
+  .image {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+     background-repeat: no-repeat;
+    background-size: cover;
+   
+    
+  }
+  .btnGroup {
+    width: 280px;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: 0px;
+    bottom: 10px;
+  }
+  .rowbtns {
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+  }
+  .rowbtns.active {
+    color: red;
+  }
+  @media only screen and ( max-width : 1000px) {
+    .sliderArrows {
+      font-size: 174px;
+    }
+    .btnGroup {
+      top: -10px;
+    }
+  }
+  @media only screen and ( max-width : 800px) {
+    .sliderArrows {
+      font-size: 134px;
+    }
+    .btnGroup {
+      top: -20px;
+    }
+  }
+  @media only screen and ( max-width : 600px) {
+    .sliderArrows {
+      font-size: 104px;
+    }
+    .btnGroup {
+      top: -20px;
+    }
+  }
+
+.noSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*.image{
+  transition: 0.5s
+}*/
+
+  .image.ng-hide-add,
+  .image.ng-hide-remove {
+    -webkit-transition: all linear 2s;
+    -moz-transition: all linear 2s;
+    -o-transition: all linear 2s;
+    transition: all linear 2s;
+    display: block !important;
+  }
+
+  .image.ng-hide-add.ng-hide-add-active,
+  .image.ng-hide-remove {
+    opacity: 0;
+  }
+
+  .image.ng-hide-add,
+  .image.ng-hide-remove.ng-hide-remove-active {
+    opacity: 1;
+  }
+
+
+
+</style>

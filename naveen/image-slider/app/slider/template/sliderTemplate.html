@@ -1,0 +1,16 @@
+<!-- <h2 align="center">AngularJS Image Slider!</h2> -->
+
+<div class="slideShow" ng-controller="sliderCtrl as slider">
+	<div class="slideContainer">
+		<div  ng-repeat="image in slideShow track by $index"  class="slide" align="center">
+			<img src="{{image.src}}" class="image" align="center" ng-show="image.status">
+		</div>
+		<div class="slideButtons" align="center">
+			<i align="center" class="material-icons" ng-repeat="button in buttonSlide track by $index" ng-click="getImage(button.id)" ng-class="{active: button.status}">fiber_manual_record</i>
+		</div>
+		<div class="slideArrows">
+			<i class="material-icons left noSelect" ng-click="previous()">keyboard_arrow_left</i>
+			<i class="material-icons right noSelect" ng-click="next()">keyboard_arrow_right</i>
+		</div>
+	</div>
+</div>
